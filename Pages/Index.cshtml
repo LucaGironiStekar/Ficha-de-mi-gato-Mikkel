@@ -1,0 +1,432 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<!DOCTYPE html>
+@*(determina el tipo de documento)*@
+<html>
+@*(Encierra todo el contenido de la página)*@
+<head>
+    @*(Especificaciones no visibles)*@
+    <meta charset="utf-8">
+    <title>Mi mascota es un gordo manteca</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        h1 {
+            color: darkslategrey;
+            font-size: 300%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h5{
+            font-family: "Lucida Console", "Courier New", monospace;
+            color: red;
+        }
+        h3 {
+            color: red;
+        }
+        h6 {
+            transform: rotateX(150deg)
+        }  
+        .miguel2 {
+            transform: translate(50px, 100px)
+        }
+
+        .bg-light-gray {
+            background-color: #f7f7f7;
+        }
+
+        .table-bordered thead td, .table-bordered thead th {
+            border-bottom-width: 2px;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .table-bordered td, .table-bordered th {
+            border: 1px solid #dee2e6;
+        }
+
+
+        .bg-sky.box-shadow {
+            box-shadow: 0px 5px 0px 0px #00a2a7
+        }
+
+        .bg-orange.box-shadow {
+            box-shadow: 0px 5px 0px 0px #af4305
+        }
+
+        .bg-green.box-shadow {
+            box-shadow: 0px 5px 0px 0px #4ca520
+        }
+
+        .bg-yellow.box-shadow {
+            box-shadow: 0px 5px 0px 0px #dcbf02
+        }
+
+        .bg-pink.box-shadow {
+            box-shadow: 0px 5px 0px 0px #e82d8b
+        }
+
+        .bg-purple.box-shadow {
+            box-shadow: 0px 5px 0px 0px #8343e8
+        }
+
+        .bg-lightred.box-shadow {
+            box-shadow: 0px 5px 0px 0px #d84213
+        }
+
+
+        .bg-sky {
+            background-color: #02c2c7
+        }
+
+        .bg-orange {
+            background-color: #e95601
+        }
+
+        .bg-green {
+            background-color: #5bbd2a
+        }
+
+        .bg-yellow {
+            background-color: #f0d001
+        }
+
+        .bg-pink {
+            background-color: #ff48a4
+        }
+
+        .bg-purple {
+            background-color: #9d60ff
+        }
+
+        .bg-lightred {
+            background-color: #ff5722
+        }
+
+        .padding-15px-lr {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .padding-5px-tb {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .margin-10px-bottom {
+            margin-bottom: 10px;
+        }
+
+        .border-radius-5 {
+            border-radius: 5px;
+        }
+
+        .margin-10px-top {
+            margin-top: 10px;
+        }
+
+        .font-size14 {
+            font-size: 14px;
+        }
+
+        .text-light-gray {
+            color: #d6d5d5;
+        }
+
+        .font-size13 {
+            font-size: 13px;
+        }
+
+        .table-bordered td, .table-bordered th {
+            border: 1px solid #dee2e6;
+        }
+
+        .table td, .table th {
+            padding: .75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    @*(Elementos visibles de la página)*@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <h1>Mikkel es mi gato</h1>
+    <h2> Al cual le digo Miguel </h2>
+    <h3> Está gordo </h3>
+    <h4> (Muy gordo) </h4>
+    <h5> (realmente gordo) </h5>
+    <h6> oreiuq ol orep</h6>
+    <img src="~/miguel_guaton.jpeg" alt="Miguel tirado de pana">
+    <p> Mi gato está tan gordo que tiene forma de <strong>raviol</strong>. </p>
+    <img src="~/miguel_guaton2.jpeg" alt="El gordo de miguel" class="miguel">
+    <br>
+    <br>
+    <br>
+    <h2> Miguel es… </h2>
+    <ul>
+        <li>gordo</li>
+        <li>cariñoso </li>
+        <li>dependiente emocional</li>
+    </ul>
+    <a href=”https://youtu.be/dQw4w9WgXcQ” target="_blank">
+        Video de miguel afanándose una empanada de humita
+    </a>
+    <br>
+    <br>
+    <h2> Horarios del gordo </h2>
+    <div class="container">
+        <div class="timetable-img text-center">
+            <img src="img/content/timetable.png" alt="">
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr class="bg-light-gray">
+                        <th class="text-uppercase">
+                            Hora
+                        </th>
+                        <th class="text-uppercase">Lunes</th>
+                        <th class="text-uppercase">Martes</th>
+                        <th class="text-uppercase">Miercoles</th>
+                        <th class="text-uppercase">Jueves</th>
+                        <th class="text-uppercase">Vieres</th>
+                        <th class="text-uppercase">Sábado</th>
+                        <th class="text-uppercase">Domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="align-middle">08:00am-12:00pm</td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">8:00-11:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Mimos</span>
+                            <div class="margin-10px-top font-size14">8:00-8:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Mimos</span>
+                            <div class="margin-10px-top font-size14">8:00-8:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Mimos</span>
+                            <div class="margin-10px-top font-size14">8:00-8:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Disociar</span>
+                            <div class="margin-10px-top font-size14">9:00-10:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">8:00-11:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">8:00-11:00</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">12:00pm-04:00pm</td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">13:00-13:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">13:00-13:15</div>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">13:00-13:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">13:00-13:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">13:00-13:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">13:00-13:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">13:00-13:15</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">04:00pm-8:00pm</td>
+                        <td>
+                            <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Disociar</span>
+                            <div class="margin-10px-top font-size14">16:00-20:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Mimos</span>
+                            <div class="margin-10px-top font-size14">19:00-19:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Correr</span>
+                            <div class="margin-10px-top font-size14">18:00-18:10</div>
+                        </td>
+                        <td>
+                            <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Disociar</span>
+                            <div class="margin-10px-top font-size14">16:00-20:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Mimos</span>
+                            <div class="margin-10px-top font-size14">19:00-19:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">20:00-20:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Disociar</span>
+                            <div class="margin-10px-top font-size14">16:00-20:00</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">8:00pm-12:00am</td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">22:00-22:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">22:00-22:15</div>
+                        </td>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">22:00-22:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">22:00-22:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">22:00-22:15</div>
+                        </td>
+                        <td>
+                            <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Correr</span>
+                            <div class="margin-10px-top font-size14">21:00-21:05</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">22:00-22:15</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">12:00am-04:00am</td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">01:00-04:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">01:00-04:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">01:00-04:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">01:00-04:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">01:00-04:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">01:00-04:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">01:00-04:00</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle">04:00am-8:00am</td>
+                        <td>
+                            <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Correr</span>
+                            <div class="margin-10px-top font-size14">4:20-5:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">04:00-7:30</div>
+                        </td>
+                        <td>
+                            <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Disociar</span>
+                            <div class="margin-10px-top font-size14">05:00-06:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Correr</span>
+                            <div class="margin-10px-top font-size14">4:20-5:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">04:00-7:30</div>
+                        </td>
+                        <td>
+                            <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Disociar</span>
+                            <div class="margin-10px-top font-size14">05:00-06:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Correr</span>
+                            <div class="margin-10px-top font-size14">4:20-5:00</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @*Categorías del grafico
+                        <td>
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Dormir</span>
+                            <div class="margin-10px-top font-size14">9:00-10:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Comer</span>
+                            <div class="margin-10px-top font-size14">9:00-10:00</div>
+                        </td>
+
+                        <td>
+                            <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Correr</span>
+                            <div class="margin-10px-top font-size14">9:00-10:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Mimos</span>
+                            <div class="margin-10px-top font-size14">9:00-10:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Disociar</span>
+                            <div class="margin-10px-top font-size14">9:00-10:00</div>
+                        </td>
+                        <td>
+                            <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Correr</span>
+                            <div class="margin-10px-top font-size14">1:00-2:00</div>
+                        </td>*@
+</body>
+</html>
